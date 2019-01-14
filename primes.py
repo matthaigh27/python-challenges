@@ -7,8 +7,9 @@ def isprime(x):
             return False
     return True
 
-while True:
-    x = for i in range()
-    t = time.time()
-    print(isprime(int(x)))
-    print(time.time() - t)
+if __name__ == "__main__":
+    while True:
+        x = input("number please? ")
+        t = time.time()
+        print(isprime(int(x)))
+        print(time.time() - t)
