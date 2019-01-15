@@ -1,8 +1,6 @@
 def fact(x):
-    cond = True
-
     if x != 1:
-        for div in range (2, x // 2 + 1):
+        for div in range(2, x // 2 + 1):
             if x % div == 0:
                 factors.append(div)
                 factors.append(x//div)
@@ -14,6 +12,6 @@ def fact(x):
         factors.clear()
         return fac
 
+
 factors = []
-print(fact(22))
-print(fact(14))
+print(fact(3))
