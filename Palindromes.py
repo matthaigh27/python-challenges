@@ -1,21 +1,16 @@
 L = 999
 R = 999
-cond = True
 p = 1
 c = 0
 geo = 111
-
-
-def rev(x):
-    return x[::-1]
-
+cond = True
 
 while(cond):
     c += 1
     # print(R)
     if L > 111:
         L -= 1
-        if str(L * R) == rev(str(L * R)):
+        if str(L * R) == str(L * R)[::-1]:
             if L * R > p:
                 geo = (L * R) ** 0.5 // 1
                 p = L * R
