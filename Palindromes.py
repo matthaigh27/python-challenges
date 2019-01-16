@@ -1,27 +1,28 @@
-L = 999
-R = 999
-p = 1
-c = 0
+left = 999
+right = 999
+palindrome = 1
+counter = 0
 geo = 111
 cond = True
 
 while(cond):
-    c += 1
-    # print(R)
-    if L > 111:
-        L -= 1
-        if str(L * R) == str(L * R)[::-1]:
-            if L * R > p:
-                geo = (L * R) ** 0.5 // 1
-                p = L * R
-                Rp = R
-                Lp = L
+    counter += 1
+    if left > geo:
+        left -= 1
+        if str(left * right) == str(left * right)[::-1]:
+            if left * right > palindrome:
+                geo = (left * right) ** 0.5 // 1
+                palindrome = left * right
+                best_right = right
+                best_left = left
+                right -= 1
+                left = right
     else:
-        if R == geo:
-            print("Palindrome:", p)
-            print("Product:", Lp, "x", Rp)
+        if right == geo:
+            print("Palindrome:", palindrome)
+            print("Product:", best_left, "x", best_right)
             cond = False
         else:
-            R -= 1
-            L = R
-print("Number of loops:",c)
+            right -= 1
+            left = right
+print("Number of loops:", counter)
