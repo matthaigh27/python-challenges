@@ -1,6 +1,6 @@
 def isprime(x):
-    for i in range(2, round(x ** 0.5)):
-        if (x / i - x // i) == 0:
+    for i in range(2, int((x ** 0.5)) + 1):
+        if x % i == 0:
             return False
     return True
 
@@ -12,4 +12,4 @@ def isgprime(real,imag):
     )
 
 if __name__ == "__main__":
-    print(isgprime(3, 2))
+    print(isprime(4))

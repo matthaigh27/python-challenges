@@ -1,8 +1,8 @@
-left = 999
-right = 999
+left = 99999999
+right = 99999999
 palindrome = 1
 counter = 0
-geo = 111
+geo = 11111111
 cond = True
 
 while(cond):
